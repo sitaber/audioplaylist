@@ -3,7 +3,7 @@ A __CSS__ styled __HTML5__ audio player and playlist controlled by __JavaScript_
 
 ![Sample Screenshot](./assets/screenshot.png)
 
-See a live example [here](sitaber.github.io/audioplaylist/)
+See a live example https://sitaber.github.io/audioplaylist
 
 
 ## Setup
