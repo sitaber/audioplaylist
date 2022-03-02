@@ -1,0 +1,139 @@
+/* Custom CSS for Audio Player */
+ 
+@media (min-width: 512px) {
+  .container {
+    max-width: 512px;
+    margin: 0 auto;
+  }
+}
+
+audio {
+    width: 100%;
+    display: none;
+    margin-bottom: -4px;
+
+}
+
+
+/* Controls - Player  CSS */
+.controlBar {
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	padding: 0;
+	background-color: black; /*rgba(26,26,26,.8);*/
+	--height: 40px;
+	--width: 100%;
+	width: var(--width);
+	height: var(--height);
+}
+
+.buttonContainer {
+    width: calc(var(--width) * 0.125); 
+    display:flex;
+    justify-content: center; 
+    align-items: center;
+    box-sizing: border-box;
+    margin: 0px 12px;
+    background-color: grey;
+}
+
+.button {
+	color: white;
+}
+
+@media (hover:hover) {
+    .buttonContainer:hover > .button {
+        color:#48a0f7;
+    }
+}
+
+#playButton {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#progressBar {
+    width:0%;
+    height: calc(var(--height) * 0.25);
+    background: #48a0f7;
+}
+
+#progressRail {
+    background: #cfcfe1c9;
+    margin: 0px 4px;
+}
+
+#volumeBar {
+    height: calc(var(--height) * 0.25);
+    background: white;
+}
+
+#volumeRail { /* range-track */
+    background: #cfcfe1c9;
+    margin: 0px 12px 0px 0px;
+}
+
+.currentTime {
+    width: calc(var(--width) * 0.12);
+    text-align: right;
+    margin:2px;
+    user-select: none;
+    color:white;
+    font-family: sans-serif;
+    font-size:12px;
+}
+
+.totalTime{
+    width: calc(var(--width) * 0.12);
+    margin:2px;
+    user-select: none;
+    color:#cfcfe1c9;
+    font-family: sans-serif;
+    font-size:12px;
+}
+
+
+/* Playlist  CSS */
+.playlist {
+  display: none;
+}
+
+.playlist.active {
+  display: block;
+}
+
+.playlist {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    background: black; 
+    border: 5px solid grey;
+}  
+  
+.playlist-item {
+  position: relative;
+  display: block;
+  padding: 2px 2px;
+  margin: 1px 5px;
+  text-decoration: none; 
+}
+
+a.playlist-item {
+    color: #06bd01;
+}
+
+a.playlist-item.active {
+    color: #fff;
+    border: 1px solid #00f826;
+    background-color: #0d1567;   
+}
+
+.playlist-item > span {
+    float:right;
+}
+
+
