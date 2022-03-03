@@ -7,7 +7,7 @@ See a live example https://sitaber.github.io/audioplaylist
 
 
 ## Setup
-To make your own playlist, find the following section in *__index.html__*
+To make your own playlist, find the following section in `index.html`
 
 ```HTML
 <!-- Playlists !-->
@@ -35,24 +35,18 @@ For each playlist item, add the following anchor HTML element
 ```
 and fill in the fields as appropriate. 
 
-```NOTE:``` You do not need the _songs_ folder. You can have the song file be in any location you would like
+**NOTE:** You do not need the _songs_ folder. You can have the song file be in any location you would like
 
 ## Player
-The styled player should work with most web browsers. However, if it is unresponsive or not functioning correctly, click the button below the playlist labeled ```Switch Player``` to switch to your browsers default player.
+The styled player should work with most web browsers. However, if it is unresponsive or not functioning correctly, click the button below the playlist labeled `Switch Player` to switch to your browsers default player.
 
-If you do not wish to use the player, remove everything between the comments
-```HTML 
-<!-- Main Control Bar !-->
-``` 
-and 
-```HTML
-<!-- End Main Control Bar !-->
-```
+If you do not wish to use the player, remove everything between the comments:
 
-And the following
+`<!-- Main Control Bar !-->` and `<!-- End Main Control Bar !-->`
+
+And remove the following at the bottom of `index.html`
 ```HTML
 <div>         
 <button type="button" id="btn">Switch Player</button>
 </div> 
 ```
-in the *__index.html__* file.
