@@ -5,72 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>Audio Player and Playlist</title>
-    <link rel="stylesheet" href="assets/css/font-awesome.css">
-    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/audioPlayer.css">
 </head>
 <body>
-    
     <!-- Custom Audio Player !-->
-    <div class="container">
-    <audio id="audioPlayer" class="audio" preload=”metadata” controls> Sorry, your browser doesn't support html5!</audio>
-    
-    <!-- Main Control Bar !-->
-    <div class="controlBar">
-        <!-- Back Button !-->
-        <div class="buttonContainer" id="backButton">
-            <div class="fa fa-backward fa-sm button" aria-hidden="true"></div>
-        </div>
-    
-        <!-- Play Button !-->
-        <div class="buttonContainer" id="playButton" >
-            <div class="fa fa-play fa-sm button" aria-hidden="true"></div>
-        </div>
-        
-        <!-- Forward Button !-->
-        <div class="buttonContainer" id="forwardButton">
-            <div class="fa fa-forward fa-sm button" aria-hidden="true"></div>
-        </div>
-        
-        <!-- Progress Indicator !-->
-        <div style="width: calc(var(--width) * 0.30);">
-            <div id="progressRail">
-                <div id="progressBar"></div>
-            </div>
-        </div>
-        
-        <!-- Time Text !-->
-        <div class="currentTime"> </div>
-        <div class="totalTime"> </div>
-        
-        <!-- Volume Button !-->
-        <div class="buttonContainer" id="muteButton">
-            <div class="fa fa-volume-up fa-sm button" aria-hidden="true"></div>
-        </div>
-        
-        <!-- Volume Indicator !-->
-        <div style="width: calc(var(--width) * 0.20);">
-            <div id="volumeRail">
-                <div id="volumeBar"></div>
-            </div>
-        </div>
-    </div>
-    <!-- End Main Control Bar !-->
-    
-    <!-- Playlists !-->
-        <div class="playlist active" id="one"> 
-        <a class="playlist-item active" href="songs/Chill-Hop.mp3">Chill-Hop <span> 2:18 </span></a>
-        <a class="playlist-item" href="songs/Grouchy.mp3">Grouchy <span> 1:37 </span></a>   
-        <a class="playlist-item" href="songs/Mega Door Dash.mp3">Mega Door Dash <span> 1:30 </span></a>
-        <a class="playlist-item" href="songs/Space Circus.mp3">Space Circus <span> 1:39 </span></a>    
-        </div> 
-        
-    <div>         
-    <button type="button" id="btn">Switch Player</button>
-    </div> 
-    <!-- End Playlists !-->
+    <div class="player-container">
+      <audio id="audioPlayer" class="audio" preload=”metadata” controls> No HTML5 support!</audio>
+
+      <!-- Main Control Bar !-->
+      <div class="controlBar">
+          <!-- Back Button !-->
+          <div class="buttonContainer" id="backButton">
+              <div class="icon icon-backward player-button" aria-hidden="true"></div>
+          </div>
+
+          <!-- Play Button !-->
+          <div class="buttonContainer" id="playButton" >
+              <div class="icon icon-play player-button" aria-hidden="true"></div>
+          </div>
+
+          <!-- Forward Button !-->
+          <div class="buttonContainer" id="forwardButton">
+              <div class="icon icon-forward player-button" aria-hidden="true"></div>
+          </div>
+
+          <!-- Progress Indicator !-->
+          <div style="width: calc(var(--width) * 0.30);">
+              <div id="progressRail">
+                  <div id="progressBar"></div>
+              </div>
+          </div>
+
+          <!-- Time Text !-->
+          <div class="currentTime"> </div>
+          <div class="totalTime"> </div>
+
+          <!-- Volume Button !-->
+          <div class="buttonContainer" id="muteButton">
+              <div class="icon icon-volume-up player-button" aria-hidden="true"></div>
+          </div>
+
+          <!-- Volume Indicator !-->
+          <div style="width: calc(var(--width) * 0.20);">
+              <div id="volumeRail">
+                  <div id="volumeBar"></div>
+              </div>
+          </div>
+      </div>
+      <!-- End Main Control Bar !-->
+
+      <!-- Playlists !-->
+      <div id="playlist">
+        <a class="playlist-item active" href="songs/Chill-Hop.mp3">Chill-Hop</a>
+        <a class="playlist-item" href="songs/Grouchy.mp3">Grouchy</a>
+        <a class="playlist-item" href="songs/Mega Door Dash.mp3">Mega Door Dash</a>
+        <a class="playlist-item" href="songs/Space Circus.mp3">Space Circus</a>
+      </div>
+      <!-- End Playlists !-->
+      <div>
+
     </div>
     <!-- End Custom Audio Player !-->
-    <script src="assets/js/controls.js"></script>
-    <script src="assets/js/playlist.js"></script> 
+    <script src="assets/audioPlaylist.js"></script>
 </body>
 </html>

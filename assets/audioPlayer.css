@@ -1,7 +1,52 @@
+@font-face {
+  font-family: 'player';
+  src:
+    url('./fonts/player.ttf?cxp7hr') format('truetype'),
+    url('./fonts/player.woff?cxp7hr') format('woff'),
+    url('./fonts/player.svg?cxp7hr#player') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'player' !important;
+  font: normal normal normal 18px/1 player;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-play:before {
+  content: "\ea1c";
+}
+.icon-pause:before {
+  content: "\ea1d";
+}
+.icon-backward:before {
+  content: "\ea1f";
+}
+.icon-forward:before {
+  content: "\ea25";
+}
+.icon-volume-up:before {
+  content: "\ea27";
+}
+.icon-volume-off:before {
+  content: "\ea29";
+}
+
 /* Custom CSS for Audio Player */
- 
 @media (min-width: 512px) {
-  .container {
+  .player-container {
     max-width: 512px;
     margin: 0 auto;
   }
@@ -13,7 +58,6 @@ audio {
     margin-bottom: -4px;
 
 }
-
 
 /* Controls - Player  CSS */
 .controlBar {
@@ -32,21 +76,21 @@ audio {
 }
 
 .buttonContainer {
-    width: calc(var(--width) * 0.125); 
+    width: calc(var(--width) * 0.125);
     display:flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     box-sizing: border-box;
     margin: 0px 12px;
     background-color: grey;
 }
 
-.button {
+.player-button {
 	color: white;
 }
 
 @media (hover:hover) {
-    .buttonContainer:hover > .button {
+    .buttonContainer:hover > .player-button {
         color:#48a0f7;
     }
 }
@@ -98,28 +142,20 @@ audio {
 
 
 /* Playlist  CSS */
-.playlist {
-  display: none;
-}
-
-.playlist.active {
-  display: block;
-}
-
-.playlist {
+#playlist {
     box-sizing: border-box;
     font-family: Arial, sans-serif;
     font-weight: bold;
-    background: black; 
+    background: black;
     border: 5px solid grey;
-}  
-  
+}
+
 .playlist-item {
   position: relative;
   display: block;
   padding: 2px 2px;
   margin: 1px 5px;
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 a.playlist-item {
@@ -129,11 +165,9 @@ a.playlist-item {
 a.playlist-item.active {
     color: #fff;
     border: 1px solid #00f826;
-    background-color: #0d1567;   
+    background-color: #0d1567;
 }
 
 .playlist-item > span {
     float:right;
 }
-
-
