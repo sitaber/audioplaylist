@@ -2,7 +2,7 @@
 
 A __CSS__ styled __HTML5__ audio player and playlist with  __JavaScript__ controls. All styles are CSS with the help of some icons for the player buttons. All needed styling and JavaScript files are provided in the `assets` directory. See the screenshot below for what the player and playlist look like, and see a live example here: https://sitaber.github.io/audioplaylist
 
-![Sample Screenshot](./screenshot.png)
+![Sample Screenshot](./Screenshot.png)
 
 The primary use case for this project is deployment on GitHub pages (or other static sites) where one would like to have a media player with more than one song available and not have several HTML audio players.
 
