@@ -104,6 +104,7 @@ audio {
     width:0%;
     height: calc(var(--height) * 0.25);
     background: #48a0f7;
+    margin: 0px;
 }
 
 #progressRail {
@@ -114,6 +115,7 @@ audio {
 #volumeBar {
     height: calc(var(--height) * 0.25);
     background: white;
+    margin: 0px;
 }
 
 #volumeRail { /* range-track */
