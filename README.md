@@ -1,5 +1,9 @@
 # HTML5 Audio Player & Playlist
 
+**UPDATE 03/21/2024**: Updated CSS and Javascript to fix issues that occured when placing the "player-container" div inside another div or container that had its own styling, which caused _Progress_ and _Volume_ to not update correctly.  
+
+<hr>
+
 A __CSS__ styled __HTML5__ audio player and playlist with  __JavaScript__ controls. All styles are CSS with the help of some icons for the player buttons. All needed styling and JavaScript files are provided in the `assets` directory. See the screenshot below for what the player and playlist look like, and see a live example here: https://sitaber.github.io/audioplaylist
 
 ![Sample Screenshot](./Screenshot.png)
