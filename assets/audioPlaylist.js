@@ -1,7 +1,7 @@
 /* Audio Player Controls */
 
 // Song Location Indicator
-var mainOffSet = document.querySelector(".controlBar").offsetLeft;
+var mainOffSet = document.querySelector(".controlBar").getBoundingClientRect().x;
 var progressBar = document.getElementById("progressBar");
 var progressRail = document.getElementById("progressRail");
 var maxProgress = document.getElementById("progressRail").offsetWidth;
@@ -34,6 +34,18 @@ var dragVolume = false; // Volume Control
 
 volumeBar.style.width = "100%";
 // -----------------------------------------------------------------------------
+// Update off sets when screen is resized or rotated
+function updateWindowOffsets() {
+  mainOffSet = document.querySelector(".controlBar").getBoundingClientRect().x;
+  maxProgress = document.getElementById("progressRail").offsetWidth;
+  maxVolume = document.getElementById("volumeRail").offsetWidth;
+}
+
+window.onresize = updateWindowOffsets;
+screen.addEventListener("orientationchange", () => {
+  updateWindowOffsets();
+});
+
 // Button toggles
 function toggleMute() {
   muteButton.firstElementChild.classList.replace("icon-volume-off", "icon-volume-up");
